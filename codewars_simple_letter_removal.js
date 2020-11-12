@@ -11,6 +11,13 @@ solve('abracadabra', 8) = 'rdr'
 solve('abracadabra',50) = ''
 */
 
-function solve(s, k){
-    //..
+function solve(string, k){
+    let i = 0
+    let sortedString = string.split('').sort().join('')
+    while(i < k){
+        let letter = sortedString.charAt(i) 
+        string = string.replace(letter, '')
+        i++ 
+    }
+    return string
 }
